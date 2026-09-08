@@ -40,8 +40,12 @@ CREATE TABLE kisi_bilgisi (
 );
 ```
 
-3. `config.php` icindeki kullanici adi ve sifreyi kendi ortaminiza gore
-   duzenleyin.
+3. `.env.example` dosyasini `.env` olarak kopyalayip veritabani bilgilerinizi
+   yazin:
+
+```bash
+cp .env.example .env
+```
 4. Klasoru bir PHP sunucusunda calistirin:
 
 ```bash
@@ -52,8 +56,6 @@ Ardindan `http://localhost:8000/listele.php` adresini acin.
 
 ## Bilinen eksikler
 
-- Veritabani bilgileri `config.php` icinde duz metin duruyor; ortam
-  degiskenlerine (`.env`) tasinmasi gerekiyor.
 - `s.php` ve `t.php` olu dosyalar, silinebilir.
 - Stil her sayfanin icine `<style>` olarak gomulu; ortak bir CSS dosyasina
   cikarilabilir.
