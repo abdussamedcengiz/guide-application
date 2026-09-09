@@ -59,6 +59,17 @@ php -S localhost:8000
 
 Ardindan `http://localhost:8000/listele.php` adresini acin.
 
+## Guvenlik notu
+
+Bu depo 2024'ten 2026'ya kadar veritabani sifresini `config.php` icinde duz
+metin olarak tasidi. Sifre koddan cikarildi ama **git gecmisinde duruyor**:
+eski commit'ler herkese acik oldugu icin okunmaya devam edebilir. Gecmis
+bilerek yeniden yazilmadi (force-push depodaki tum commit kimliklerini
+degistirir).
+
+Bu yuzden o sifre **yanmis sayilmalidir**: baska bir yerde kullanildiysa
+degistirilmeli, bu projede de yeni bir sifre secilmeli.
+
 ## Bilinen eksikler
 
 - `s.php` ve `t.php` olu dosyalar, silinebilir.
