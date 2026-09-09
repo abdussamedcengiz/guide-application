@@ -40,8 +40,17 @@ CREATE TABLE kisi_bilgisi (
 );
 ```
 
-3. `config.php` icindeki kullanici adi ve sifreyi kendi ortaminiza gore
-   duzenleyin.
+3. `config.local.example.php` dosyasini `config.local.php` olarak kopyalayip
+   veritabani bilgilerinizi yazin:
+
+```bash
+cp config.local.example.php config.local.php
+```
+
+   Ayarlar bilerek `.env` yerine bir PHP dosyasinda tutuluyor: bu projede
+   dosyalar dogrudan site kokunden servis edildigi icin koke konan bir `.env`
+   tarayicidan duz metin olarak okunabiliyor. PHP dosyasi istendiginde
+   calistiriliyor ve disariya hicbir sey yazmiyor.
 4. Klasoru bir PHP sunucusunda calistirin:
 
 ```bash
@@ -50,10 +59,19 @@ php -S localhost:8000
 
 Ardindan `http://localhost:8000/listele.php` adresini acin.
 
+## Guvenlik notu
+
+Bu depo 2024'ten 2026'ya kadar veritabani sifresini `config.php` icinde duz
+metin olarak tasidi. Sifre koddan cikarildi ama **git gecmisinde duruyor**:
+eski commit'ler herkese acik oldugu icin okunmaya devam edebilir. Gecmis
+bilerek yeniden yazilmadi (force-push depodaki tum commit kimliklerini
+degistirir).
+
+Bu yuzden o sifre **yanmis sayilmalidir**: baska bir yerde kullanildiysa
+degistirilmeli, bu projede de yeni bir sifre secilmeli.
+
 ## Bilinen eksikler
 
-- Veritabani bilgileri `config.php` icinde duz metin duruyor; ortam
-  degiskenlerine (`.env`) tasinmasi gerekiyor.
 - `s.php` ve `t.php` olu dosyalar, silinebilir.
 - Stil her sayfanin icine `<style>` olarak gomulu; ortak bir CSS dosyasina
   cikarilabilir.
