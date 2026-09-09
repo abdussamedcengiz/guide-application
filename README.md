@@ -40,12 +40,17 @@ CREATE TABLE kisi_bilgisi (
 );
 ```
 
-3. `.env.example` dosyasini `.env` olarak kopyalayip veritabani bilgilerinizi
-   yazin:
+3. `config.local.example.php` dosyasini `config.local.php` olarak kopyalayip
+   veritabani bilgilerinizi yazin:
 
 ```bash
-cp .env.example .env
+cp config.local.example.php config.local.php
 ```
+
+   Ayarlar bilerek `.env` yerine bir PHP dosyasinda tutuluyor: bu projede
+   dosyalar dogrudan site kokunden servis edildigi icin koke konan bir `.env`
+   tarayicidan duz metin olarak okunabiliyor. PHP dosyasi istendiginde
+   calistiriliyor ve disariya hicbir sey yazmiyor.
 4. Klasoru bir PHP sunucusunda calistirin:
 
 ```bash

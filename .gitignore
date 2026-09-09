@@ -1,2 +1,6 @@
 # Veritabani bilgileri burada, depoya girmemeli
+config.local.php
+
+# Onceki surumde ayarlar .env'de tutuluyordu. Artik kullanilmiyor ama
+# elinde eski bir kopya kalanlarda yanlislikla commit'lenmesin diye duruyor.
 .env
